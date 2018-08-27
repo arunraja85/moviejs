@@ -1,0 +1,76 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Kabali",
+      "posterpath": "/images/Kabali.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Annamalai",
+      "posterpath": "/images/annamalai.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Red",
+      "posterpath": "/images/red.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sachin",
+      "posterpath": "/images/Sachin.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Mission Impossible",
+      "posterpath": "/images/mip.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Kaala",
+      "posterpath": "/images/kaala.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Oru Naal",
+      "posterpath": "/images/orunaal.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Jungle Book",
+      "posterpath": "/images/jb.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Poi",
+      "posterpath": "/images/poi.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Periyar",
+      "posterpath": "/images/periyar.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Kamarajar",
+      "posterpath": "/images/Kamarajar.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Friends",
+      "posterpath": "/images/friends.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Thenali",
+      "posterpath": "/images/thenali.jpg"
+    },
+    {
+      "id": 14,
+      "title": "muni",
+      "posterpath": "/images/muni.jpg"
+    }
+  ],
+  "favourites": [
+  ]
+}
