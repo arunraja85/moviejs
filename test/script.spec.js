@@ -75,11 +75,38 @@ describe('Movie Cruiser', () => {
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<h2>Movies</h2>
-					<ul id="moviesList"></ul>
+					<ul id="moviesList">
+					<table class="table table-dark  table-bordered table-striped table-responsive">
+						<thead>
+							<tr>
+								<th scope="col">Id</th>
+								<th scope="col">Movie Name</th>
+								<th scope="col">Poster Path</i></th>
+								<th scope="col">Favourites</th>
+							</tr>
+						</thead>
+						<tbody id="movies">
+
+						</tbody>
+						</table>
+						</ul>
 				</div>
 				<div class="col-12 col-md-6">
 					<h2>Favourites</h2>
-					<ul id="favouritesList"></ul>
+					<ul id="favouritesList">
+					<table class="table table-dark">
+					<thead>
+						<tr>
+							<th scope="col">Movie Name</th>
+							<th scope="col">Poster Path</i></th>
+						</tr>
+					</thead>
+					<tbody id="favourites">
+
+					</tbody>
+
+				</table>
+					</ul>
 				</div>
 			</div>
 		</div>`;

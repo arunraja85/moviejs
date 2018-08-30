@@ -72,5 +72,15 @@
     }
   ],
   "favourites": [
+    {
+      "id": 14,
+      "title": "muni",
+      "posterpath": "/images/muni.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Sachin",
+      "posterpath": "/images/Sachin.jpg"
+    }
   ]
 }
