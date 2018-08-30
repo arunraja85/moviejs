@@ -60,7 +60,7 @@ let favouriteMovieList = {};
 			console.log("favourites movie list before "+favouriteMovieList);
 			favouriteMovieList = movies;
 			console.log("favourites movie list "+favouriteMovieList);
-			return movies;
+			return favouriteMovieList;
 		}else{
 			reject(new Error('error'));
 		}
@@ -127,15 +127,28 @@ function addFavourite(id) {
 		title : selectedRow.title.innerHTML,
 		posterpath : selectedRow.posterpath.innerHTML
 	}
-	console.log("arun testing "+movie);
+	// var arra1 = [{"id":1,"name":"kabali"},{"id":2,"name":"kaala"}];
+
+	// var v = 1; 
+	// var res = arra1.filter(fm => fm.id === v).length>0;
+	// let movieArray = getFavourites().then(response => response).catch(new Error("Favourite list error"));
+	console.log("checking for object type "+typeof(favouriteMovieList));
+	const arr = Object.values(favouriteMovieList);
+	console.log(arr);
+	
+	// let movieArray1 = JSON.parse(movieArray.then(response));
+	let movieId = movie.id;
+	let isDuplicate = arr.filter(fm => fm.id === movieId).length>0;
+	console.log("arun  duplicate testing "+ isDuplicate);
+		// console.log("arun testing "+movie);
 	//console.log("arun testing "+getFavourites());
 	//console.log("arun testing "+getFavourites().then(mo => mo.json()));
-	console.log("arun testing "+favouriteMovieList);
-	console.log("arun testing "+JSON.stringify(favouriteMovieList));
+	//console.log("arun testing "+favouriteMovieList);
+	//console.log("arun testing "+JSON.stringify(favouriteMovieList));
 	//getFavouritesMovieList().forEach(fav -> fav.id = selectedRow.id.innerHTML)
 	//let isDuplicate = favouriteMovieList != null ? checkDuplicateInObject(id,JSON.stringify(favouriteMovieList)) : false;
 	//console.log(isDuplicate + "checking dupicate value");
-	//if(!isDuplicate){
+	if(!isDuplicate){
 		return fetch("http://localhost:3000/favourites",
 		{
 			method:'POST',
@@ -157,9 +170,10 @@ function addFavourite(id) {
 		}).catch(error =>{
 			console.log("Internal Error Occurred");
 		})
-	// }else{
-	// 	new Error("Duplicate Id Error");
-	// }
+	}else{
+		alert("Duplicate error");
+		new Error("Duplicate Id Error");
+	}
 }
 
 module.exports = {

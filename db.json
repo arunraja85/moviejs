@@ -81,6 +81,21 @@
       "id": "4",
       "title": "Sachin",
       "posterpath": "/images/Sachin.jpg"
+    },
+    {
+      "id": "1",
+      "title": "Kabali",
+      "posterpath": "/images/Kabali.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Oru Naal",
+      "posterpath": "/images/orunaal.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Thenali",
+      "posterpath": "/images/thenali.jpg"
     }
   ]
 }
