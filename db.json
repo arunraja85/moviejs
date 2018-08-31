@@ -3,84 +3,84 @@
     {
       "id": 1,
       "title": "Kabali",
-      "posterpath": "/images/Kabali.jpg"
+      "posterPath": "/images/Kabali.jpg"
     },
     {
       "id": 2,
       "title": "Annamalai",
-      "posterpath": "/images/annamalai.jpg"
+      "posterPath": "/images/annamalai.jpg"
     },
     {
       "id": 3,
       "title": "Red",
-      "posterpath": "/images/red.jpg"
+      "posterPath": "/images/red.jpg"
     },
     {
       "id": 4,
       "title": "Sachin",
-      "posterpath": "/images/Sachin.jpg"
+      "posterPath": "/images/Sachin.jpg"
     },
     {
       "id": 5,
       "title": "Mission Impossible",
-      "posterpath": "/images/mip.jpg"
+      "posterPath": "/images/mip.jpg"
     },
     {
       "id": 6,
       "title": "Kaala",
-      "posterpath": "/images/kaala.jpg"
+      "posterPath": "/images/kaala.jpg"
     },
     {
       "id": 7,
       "title": "Oru Naal",
-      "posterpath": "/images/orunaal.jpg"
+      "posterPath": "/images/orunaal.jpg"
     },
     {
       "id": 8,
       "title": "Jungle Book",
-      "posterpath": "/images/jb.jpg"
+      "posterPath": "/images/jb.jpg"
     },
     {
       "id": 9,
       "title": "Poi",
-      "posterpath": "/images/poi.jpg"
+      "posterPath": "/images/poi.jpg"
     },
     {
       "id": 10,
       "title": "Periyar",
-      "posterpath": "/images/periyar.jpg"
+      "posterPath": "/images/periyar.jpg"
     },
     {
       "id": 11,
       "title": "Kamarajar",
-      "posterpath": "/images/Kamarajar.jpg"
+      "posterPath": "/images/Kamarajar.jpg"
     },
     {
       "id": 12,
       "title": "Friends",
-      "posterpath": "/images/friends.jpg"
+      "posterPath": "/images/friends.jpg"
     },
     {
       "id": 13,
       "title": "Thenali",
-      "posterpath": "/images/thenali.jpg"
+      "posterPath": "/images/thenali.jpg"
     },
     {
       "id": 14,
       "title": "muni",
-      "posterpath": "/images/muni.jpg"
+      "posterPath": "/images/muni.jpg"
     }
   ],
   "favourites": [
     {
-      "id": 14,
-      "title": "muni",
-      "posterpath": "/images/muni.jpg"
+      "id": "1",
+      "title": "Kabali",
+      "posterPath": "/images/Kabali.jpg"
     },
     {
-      "id": "4",
-      "title": "Sachin",
-      "posterpath": "/images/Sachin.jpg"
+      "id": "14",
+      "title": "muni",
+      "posterPath": "/images/muni.jpg"
     }
   ]
 }

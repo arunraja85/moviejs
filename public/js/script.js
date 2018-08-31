@@ -14,9 +14,9 @@ function getMovies() {
 				movies.forEach((movie)=>{
 					tbodyInnerHtml = tbodyInnerHtml+	
 					`<tr>
-					<td id="id">${movie.id}</td>
-					<td id="title">${movie.title}</td>
-					<td id="posterpath">${movie.posterpath}</td>
+					<td id="movie_${movie.id}">${movie.id}</td>
+					<td id="movie_title_${movie.id}">${movie.title}</td>
+					<td id="movie_posterpath_${movie.id}">${movie.posterpath}</td>
 					<td><button id="myBtn" class="btn btn-primary" type="submit" onClick=addFavourite(${movie.id})>Add Favourites</button></td>
 					</tr>`
 				});
@@ -96,46 +96,23 @@ let favouriteMovieList = {};
 	// 	});
 	
 }
-//const favouriteMovieList = getFavourites().then(movies => movies).catch(new Error("Unable to retrieve"));
-
-function checkDuplicateInObject(movieId, favouritesMovieList) {
-	let isDuplicate = false,
-	testObject = {};
-  console.log(favouritesMovieList);
-  console.log(Array.isArray(favouritesMovieList));
-	favouritesMovieList.map((item =>  {
-	  let itemPropertyName = item[movieId];    
-	  if (itemPropertyName in testObject) {
-		testObject[itemPropertyName].duplicate = true;
-		item.duplicate = true;
-		isDuplicate = true;
-	  }
-	  else {
-		testObject[itemPropertyName] = item;
-		delete item.duplicate;
-	  }
-	}));
-  
-	return isDuplicate;
-  }
 
 function addFavourite(id) {
-	const rowData = document.getElementsByTagName("tr")[id];
-	const selectedRow = rowData.getElementsByTagName("td");
+	//const rowData = document.getElementsByTagName("tr")[id];
+	//const selectedRow = rowData.getElementsByTagName("td");
+	const movieId = document.getElementById("movie_"+id).innerHTML;
+	const movieName = document.getElementById("movie_title_"+id).innerHTML;
+	const posterPath = document.getElementById("movie_posterpath_"+id).innerHTML;
+	console.log("row data value "+movieId);
 	const movie = {
-		id: selectedRow.id.innerHTML,
-		title : selectedRow.title.innerHTML,
-		posterpath : selectedRow.posterpath.innerHTML
+		id: movieId,
+		title : movieName,
+		posterpath : posterPath
 	}
-	console.log("arun testing "+movie);
-	//console.log("arun testing "+getFavourites());
-	//console.log("arun testing "+getFavourites().then(mo => mo.json()));
-	console.log("arun testing "+favouriteMovieList);
-	console.log("arun testing "+JSON.stringify(favouriteMovieList));
-	//getFavouritesMovieList().forEach(fav -> fav.id = selectedRow.id.innerHTML)
-	//let isDuplicate = favouriteMovieList != null ? checkDuplicateInObject(id,JSON.stringify(favouriteMovieList)) : false;
-	//console.log(isDuplicate + "checking dupicate value");
-	//if(!isDuplicate){
+	//let movieId = movie.id;
+	let isDuplicate = Object.values(favouriteMovieList).filter(fm => fm.id === movieId).length>0;
+	
+	// if(!isDuplicate){
 		return fetch("http://localhost:3000/favourites",
 		{
 			method:'POST',
@@ -144,8 +121,8 @@ function addFavourite(id) {
 				"Content-Type": "application/json; charset=utf-8",
 			}
 		}).then(response => {
-			if(response.ok){
-				return Promise.resolve(getFavourites());
+			if(!isDuplicate && response.ok){
+				return Promise.resolve(response);
 			}else{
 				return Promise.reject(new Error("Some internal error occurred"));
 			}
@@ -158,7 +135,8 @@ function addFavourite(id) {
 			console.log("Internal Error Occurred");
 		})
 	// }else{
-	// 	new Error("Duplicate Id Error");
+	// 	alert("Duplicate Favourite Movie....");
+	// 	Promise.reject(new Error("Duplicate Id Error"));
 	// }
 }
 

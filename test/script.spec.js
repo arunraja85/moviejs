@@ -86,7 +86,7 @@ describe('Movie Cruiser', () => {
 							</tr>
 						</thead>
 						<tbody id="movies">
-
+							
 						</tbody>
 						</table>
 						</ul>
