@@ -217,12 +217,17 @@ describe('Movie Cruiser', () => {
 				return script.addFavourite(476307);
 			})
 			.then((res) => {
+				console.log("a1");
+				
 				const lastCallArgs = fetchMock.lastCall();
+				console.log("a2");
 				expect(lastCallArgs[0]).to.equal('http://localhost:3000/favourites');
 				expect(lastCallArgs[1].method).to.equal('POST');
 				expect(lastCallArgs[1].body).to.equal(JSON.stringify(moviesTestData[0]));
 				favouritesTestData.push(moviesTestData[0]);
+				console.log("a4");
 				expect(res).to.deep.equal(favouritesTestData);
+				console.log("a3");
 				expect(document.getElementById('favouritesList').innerHTML)
 				.to.include('The Unique Lama');
 				done();

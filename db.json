@@ -81,6 +81,31 @@
       "id": "14",
       "title": "muni",
       "posterPath": "/images/muni.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Annamalai",
+      "posterPath": "/images/annamalai.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Red",
+      "posterPath": "/images/red.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Kaala",
+      "posterPath": "/images/kaala.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Oru Naal",
+      "posterPath": "/images/orunaal.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Poi",
+      "posterPath": "/images/poi.jpg"
     }
   ]
 }
