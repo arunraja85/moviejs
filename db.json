@@ -83,6 +83,7 @@
       "posterPath": "/images/muni.jpg"
     },
     {
+<<<<<<< HEAD
       "id": 2,
       "title": "Annamalai",
       "posterPath": "/images/annamalai.jpg"
@@ -106,6 +107,26 @@
       "id": 9,
       "title": "Poi",
       "posterPath": "/images/poi.jpg"
+=======
+      "id": "4",
+      "title": "Sachin",
+      "posterpath": "/images/Sachin.jpg"
+    },
+    {
+      "id": "1",
+      "title": "Kabali",
+      "posterpath": "/images/Kabali.jpg"
+    },
+    {
+      "id": "7",
+      "title": "Oru Naal",
+      "posterpath": "/images/orunaal.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Thenali",
+      "posterpath": "/images/thenali.jpg"
+>>>>>>> fa889c9347470ad5bf578ab3bcb9eb384ebeb3ea
     }
   ]
 }

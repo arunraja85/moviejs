@@ -112,7 +112,7 @@ function addFavourite(id) {
 	// 	posterpath : posterPath
 	// }
 	// let movieId = id;
-	debugger;
+	// debugger;
 	
 	let isDuplicate = Object.values(favouriteMovieList).filter(fm => fm.id === id).length > 0;
 	// console.log(isDuplicate+"checking is duplicate value");
